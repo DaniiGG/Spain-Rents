@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--build:css css/main.min.css-->
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <script src="https://kit.fontawesome.com/8fd2dbd2a5.js" crossorigin="anonymous"></script>
+  <title>Spain Rents</title>
+</head>
+<body>
+
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Spain Rents</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Spain Rents</h5>
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body bg-dark">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link"  href="resultados.html">Villas</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Services</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <div class="menu">
+      <div class="menu-item dropdown">
+          <label for="buscar"><i class="fa-solid fa-magnifying-glass fa-xl"></i></label>
+          <input type="text" id="buscar" name="buscar" placeholder="buscar">
+          
+      </div>
+      <div class="menu-item dropdown">
+          Fecha de salida:
+          <input type="date" id="fecha-salida" name="fecha-salida">
+      </div>
+      <div class="menu-item dropdown">
+          Fecha de llegada:
+          <input type="date" id="fecha-llegada" name="fecha-salida">
+      </div>
+      <div class="menu-item dropdown">
+          Habitaciones:
+          <select name="habitaciones" id="habitaciones">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+          </select>
+      </div>
+      <button class="boton-buscar">Buscar</button>
+  </div>
+  </header>
+
+  <main>
+    <section>
+    <article class="slider">
+    
+    <div id="carouselExampleCaptions" class="carousel slide">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="img/casabosquehombre.jpg" class="d-block vw-100 vh-100" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Home in Spain</h5>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="img/casaenelbosque.jpeg" class="d-block vw-100 vh-100" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Second slide label</h5>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="img/casapiscina.jpeg" class="d-block vw-100 vh-100" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Third slide label</h5>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </article>
+    <article class="partners">
+      
+      <div class="img-partner"><img src="https://www.homeinitaly.com/img/partner-vogue-logo_11-22.png"></div>
+      <div class="img-partner"><img src="https://www.homeinitaly.com/img/partner-flipkey-logo_11-22.png"></div>
+      <div class="img-partner"><img src="https://www.homeinitaly.com/img/partner-tripadvisor-logo_11-22.png"></div>
+      <div class="img-partner"><img src="	https://www.homeinitaly.com/img/partner-thetimes-logo_11-22.png"></div>
+      <div class="img-partner"><img src="	https://www.homeinitaly.com/img/partner-condenast-traveller-logo_11-22.png"></div>
+    </article>
+
+    <article class="about">
+      <h1>VILLAS DE LUJO Y ALQUILERES VACACIONALES EN ESPAÑA</h1>
+      <div class="features">
+        <div class="aspect">
+          <p class="icon"><i class="fa-solid fa-medal fa-2xl"></i></p>
+          <div>
+          <h5>31 YEARS OF EXPERIENCE</h5>
+          <p>we personally inspect the finest villas for rent in Italy</p>
+        </div>
+        </div>
+        <div class="aspect">
+          
+          <p class="icon"><i class="fa-regular fa-user fa-2xl"></i></p>
+          <div>
+          <h5>OUTSTANDING SERVICE</h5>
+          <p>we can custom-design your vacation with our first <br>class concierge team</p>
+        </div>
+        </div>
+        <div class="aspect">
+          <p class="icon"><i class="fa-solid fa-earth-americas fa-2xl"></i></p>
+          <div>
+          <h5>BASED IN SPAIN</h5>
+          <p>your best expert of every region for your luxury holiday<br> villa stay in Italy</p>
+        </div>
+        </div>
+        <div class="aspect">
+          <p class="icon"><i class="fa-solid fa-tag fa-2xl"></i></p>
+          <div>
+          <h5>SPECIAL OFFERS</h5>
+          <p>discover our latest deals for the best luxury <br> villa rentals in Italy</p>
+        </div>
+        </div>
+      </div>
+
+      
+      <div class="more-button"><button>Explora nuestras villas </button></div>
+      
+      
+    </article>
+
+    <article class="reseñas">
+      <h1>RESEÑAS DE INVITADOS</h1>
+
+      <div id="carouselExampleIndicators" class="carousel slide">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="opinion">
+              <img src="img/estrellas.png">
+            <p><i>The villa is beautiful, perfectly located for touring interesting towns in Umbria. Furnishing is stylish and very comfortable. Home in Italy provided outstanding service, frequently enquiring about any needs and immediately providing everything we asked for. </i></p>
+            <p>Elias Mouimi || Enero 2024</p>
+          </div>
+          </div>
+          <div class="carousel-item">
+            <div class="opinion">
+            <img src="img/estrellas.png">
+            <p><i>Really great. Loved it. How could you not? Incredibly efficient. Very professional. Nothing too much. Perfect attention to detail. Thank you Benedetta so very much for being beyond amazing, you were a total pleasure, always so very kind and helpful. Nothing was ever too much for you. </i></p>
+            <p>Pedro Villalba || Junio 2024</p>
+          </div>
+          </div>
+          <div class="carousel-item">
+            <div class="opinion">
+            <img src="img/estrellas.png">
+            <p><i>This was our best, most memorable holiday ever for 3 generations of my family. I could not fault the service leading up to the holiday and during the holiday. The staff were attentive, courteous and gracious. Attention to detail was excellent ensuring that we always had anything we would require. </i></p>
+            <p>Daniel Escobar || Mayo 2024</p>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </article>
+
+
+    <article class="revista">
+      <h1>MAGAZINE</h1>
+      <p>stay up-to-date with the best places to visit, undiscovered sites, history, curiosities of the Italian country!</p>
+      
+    <div class="revista-container">
+      <div class="revista-item">
+        <div><img src="img/revista1.png"></div>
+        <div class="content">
+          <h3>Lake Orta, Italy's undiscovered gem and charming destination</h3>
+          <p>
+            Nestled in the Piedmont region of northern Italy, Lake Orta is a tranquil oasis of natural beauty and historical charm. Often overshadowed by its more famous neighbor, Lake Como, this underrated gem offers visitors a serene and authentic experience away from the crowds. From picturesque villages to ...</p>
+          <button>Read more ...</button>
+        </div>
+
+      </div>
+      <div class="revista-item">
+        <div><img src="img/revista2.png"></div>
+        <div class="content">
+          <h3>The best places to rent a luxury villa in Sicily
+          </h3>
+          <p>Sicily, with its rich history, stunning landscapes, and exquisite cuisine, beckons travelers from around the world to indulge in its captivating charm. For those seeking the ultimate in comfort and privacy, renting a luxury villa offers an unparalleled experience of sophistication and relaxation. ...</p>
+          <button>Read more ...</button>
+        </div>
+      </div>
+
+      <div class="revista-item">
+        <div><img src="img/revista3.png"></div>
+        <div class="content">
+          <h3>Exploring the Best Towns and Villages in Lake Como</h3>
+          <p>Nestled in the picturesque Lombardy region of Italy, Lake Como stands as a beacon of natural beauty, renowned for its serene waters, charming towns, and luxury vacation villas. This idyllic destination has captivated travelers for centuries with its stunning vistas and quaint villages dotting the ...</p>
+          <button>Read more ...</button>
+        </div>
+      </div>
+
+      <div class="revista-item">
+        <div><img src="img/revista4.png"></div>
+        <div class="content">
+          <h3>Top 5 luxury wedding villas in Italy</h3>
+          <p>A wedding day is a culmination of dreams and a celebration of love. Choosing the perfect venue for this once-in-a-lifetime occasion is pivotal and Italy stands as a romantic paradise for couples worldwide. With an array of picturesque locations and luxury villas for rent perfect for a magical ...</p>
+          <button>Read more ...</button>
+        </div>
+      </div>
+    </div>
+
+    </article>
+
+    <article>
+      
+    </article>
+
+  </section>
+
+  <footer>
+    <div>
+      <p><b>© 2023 Home In Italy s.a.s</b></p>
+      <p>Our mission is to select Italy's finest private residences for holiday rental to our discerning clients</p>
+      <p>Treat yourself to the very best of Italian luxury, and enjoy the unique experience!</p>
+      <p>Our strength is to provide the most attentive service together with the rentals.</p>
+      <p>Login</p>
+
+      <p>Villa Owners</p>
+    </div>
+
+    <div>
+
+      <p><b>Encuentra más</b></p>
+      <ul>
+        <li>about us</li>
+        <li>booking conditions & forms</li>
+        <li>concierge service</li>
+        <li>special offers & last minute</li>
+      </ul>
+    </div>
+
+    <div>
+      <p><b>Contactos</b></p>
+      <ul>
+        <li>Via Settevalli 131/F, 06128</li>
+        <li> Granada, SPAIN</li>
+        <li> eu +39 075 505 78 65</li>
+        <li> int. + 1 646 934 6864</li>
+        <li>info@homeinitaly.com</li>
+      </ul>
+    </div>
+  </footer>
+  
+   
+  </main>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+</html>

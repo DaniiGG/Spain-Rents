@@ -1,0 +1,76 @@
+$color-boton: #ff6600;
+
+header{
+// Estilos del menú
+ .navbar-brand {
+      margin-right: 60vw;
+      
+      @include responsive(lg) {
+        margin-right: 0;
+      }
+    }
+    .nav-item{
+      margin-right: margin("xxs");
+      
+      border-right: 1px solid white;
+      border-left: 1px solid white;
+    }
+    .nav-item:last-child{
+      border-right: none;
+    }
+    .nav-item:first-child{
+      border-left: none;
+    }
+
+.menu {
+  
+  background-color: color("submenu");
+  padding: margin("xxs") margin("xs");
+  width: 100vw;
+ 
+}
+
+input{
+  border: none;
+  background-color: transparent;
+  &:focus {
+    outline: none; // Quita el borde al hacer focus
+  }
+}
+
+.menu-item {
+  margin-right: margin("xs");
+  @include responsive(lg) {
+   margin-bottom: margin("xs");
+  }
+}
+
+// Estilos específicos para el botón de buscar
+.boton-buscar {
+  background-color: $color-boton;
+  color:  color("secondary");
+  padding: margin("xxs") margin("xs");
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  
+  &:hover {
+    background-color: darken($color-boton, 10%);
+  }
+}
+
+// Estilos para los dropdowns
+.dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown select {
+    padding: margin("xxs");
+    border: none;
+    background-color: color("secondary");
+    color: color("primary");
+  }
+
+
+}

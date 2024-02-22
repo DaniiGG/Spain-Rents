@@ -1,0 +1,16 @@
+footer{
+    box-shadow: 0px -2px 2px 1px rgba(0, 0, 0, 0.4);
+    padding: margin("md");
+    @include pesoFuente('superlight');
+    div{
+        p{
+            &:first-child {
+                @include text-size('xs');
+              }
+        }
+    }
+    ul{
+        list-style: none;
+        padding-left: 0;
+    }
+}

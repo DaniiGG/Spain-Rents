@@ -1,0 +1,129 @@
+//// @author @descobar
+
+$colors: (
+    primary: #333,
+    secondary: rgba(255, 255, 255, 0.933),
+    tertiary: #cfcdcd,
+    quaternary: #3da9fb,
+    texto-revista:#484848c5,
+    body-back: rgb(238, 245, 248),
+    submenu: rgba(255, 255, 255, 0.815)
+);
+
+@function color($color-name) {
+    @return map-get($colors, $color-name);
+}
+
+
+$tamano:(
+    xxl:6rem,
+    xl:3rem,
+    lg:2.5rem,
+    md:2rem,
+    sm:1.8rem,
+    s:1.35rem,
+    xs:1.15rem,
+    xxs:1rem,
+    xxxs:0.75rem,
+    mini:0.5rem
+
+);
+
+@function tamano($size){
+    @return map-get($tamano, $size);
+}
+
+
+
+$margins:(
+    max:400px,
+    xxxl:320px,
+    xxl:200px,
+    xl:150px,
+    l:125px,
+    lg:100px,
+    md:75px,
+    sm:50px,
+    s:35px,
+    xs:20px,
+    xxs:10px,
+
+);
+
+@function margin($margin){
+    @return map-get($margins, $margin);
+}
+
+
+$gaps:(
+    xxxl:200px,
+    xxl:150px,
+    xl:100px,
+    lg:75px,
+    md:50px,
+    sm:20px,
+    xs:10px,
+
+);
+
+@function gap($gap){
+    @return map-get($gaps, $gap);
+}
+
+
+$widths:(
+    xxl:100vw,
+    xl:80vw,
+    l:65vw,
+    lg:60vw,
+    md:45vw,
+    sm:35vw,
+    s:23vw,
+    xs:20vw,
+
+);
+
+@function width($width){
+    @return map-get($widths, $width);
+}
+
+
+$heights:(
+    max:max-content,
+    xxl:100vw,
+    xl:80vw,
+    lg:60vw,
+    md:45vw,
+    sm:30vw,
+    s:20vw,
+    xs:10vw,
+
+);
+
+@function height($height){
+    @return map-get($heights, $height);
+}
+
+
+$font-weights: (
+    superlight:100,
+    light: 300,
+    regular: 400,
+    medium: 500,
+    bold: 700,
+    extra-bold: 800,
+);
+
+@function font-weight($weight) {
+    @return map-get($font-weights, $weight);
+}
+
+$sizesr: (
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px
+);
+@function size($size){
+  @return map-get($sizesr, $size);
+}

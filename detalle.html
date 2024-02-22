@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/8fd2dbd2a5.js" crossorigin="anonymous"></script>
+    <title>Spain Rents</title>
+    
+</head>
+<body>
+
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="index.html">Spain Rents</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Spain Rents</h5>
+              <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body bg-dark">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link"  href="resultados.html">Villas</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Services</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Contact</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+    
+        <div class="menu">
+            <div class="menu-item dropdown">
+              <label for="buscar"><i class="fa-solid fa-magnifying-glass fa-xl"></i></label>
+              <input type="text" id="buscar" name="buscar" placeholder="buscar">
+              
+          </div>
+                <div class="menu-item dropdown">
+                    Fecha de salida:
+                    <input type="date" id="fecha-salida" name="fecha-salida">
+                </div>
+                <div class="menu-item dropdown">
+                    Fecha de llegada:
+                    <input type="date" id="fecha-llegada" name="fecha-salida">
+                </div>
+                <div class="menu-item dropdown">
+                    Habitaciones:
+                    <select name="habitaciones" id="habitaciones">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                    </select>
+                </div>
+                <button class="boton-buscar">Buscar</button>
+            </div>
+      </header>
+
+      <main>
+
+        <section>
+            <article class="detalles">
+
+              <div id="carouselExampleIndicators" class="carousel slide">
+                <div class="carousel-indicators">
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                </div>
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="resultados/detalles/habita1.png" class="d-block w-100" alt="...">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="resultados/detalles/habita2.png" class="d-block w-100" alt="...">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="resultados/detalles/piscina.png" class="d-block w-100" alt="...">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="resultados/detalles/vistas.png" class="d-block w-100" alt="...">
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+
+              <div class="informacion1">
+                <div class="flex-left">
+                  <div class="info-base">
+                    <div>
+                      <img height="20" src="img/estrellas.png">
+                      <h1>ABACO</h1>
+                      <p>Barcelona, España</p><br>
+                      <p><i class="fa-solid fa-user fa-xl"></i>&nbsp; <b>12</b></p>
+                      <p><b>6</b> Habitaciones  <b>7</b> baños <b>1</b> baño invitados</p>
+                    </div>
+                    <div>
+                      <p>Villa costera</p>
+                      <p>Price on demand</p><br><br>
+                      <p><img height="50" width="50" src="img/walkable-to-restaurant.svg">&nbsp;&nbsp;<img height="50" width="50" src="img/walkable-to-village.svg"></p>
+                    </div>
+                  </div>
+
+                  <div class="overview">
+                    <p>Set in the iconic location of Porto Cervo, this luxury private villa in Sardinia is one of the ultimate estates available for weekly rentals when it comes to a glamorous Italian vacation. Abaco is a real modern architectural gem, boasting particular design features such as the harmonious fusion between the use of stone and Mediterranean vegetation in the ambiance.
+                    This elegant two-story property includes six polished bedrooms provided with en suite bathrooms. With separate entrances to each room, this villa is ideal for friends and couples travelling together. In addition, there are four more bedrooms dedicated to the villa staff on the lower ground floor.
+                    <br>The minimal interiors are marvellously brightened by the sunlight through floor-to-ceiling windows to make sea lovers feel just a few steps away from the Smeralda Coast.
+                    <br>Besides the two floors, the luxury property includes a vast terrace with a terrific view over the maritime landscape. Up here, the whole roof is completely covered by lawn to be used as a solarium area. Abaco comes with an added value: a majestic multi-level swimming pool where guests can treat themselves to long swims and the pleasure of a Jacuzzi massage accompanied by astonishing sceneries.
+                  
+                    </p>
+                  </div>
+                </div>
+                <div class="wish">
+                  <button><i class="fa-regular fa-heart fa-lg"></i>&nbsp;AÑADIR A LISTA DE DESEOS</button>
+                  <div class="input-container">
+                    <input required="" id="input" type="text" />
+                    <label class="label" for="input">NÚMERO DE INVITADOS</label>
+                    <div class="underline"></div>
+                  </div>
+                  <div class="input-container">
+                    <input required="" id="input" type="date" placeholder="" />
+                    <label class="label" for="input">FECH PREFERIDA</label>
+                    <div class="underline"></div>
+                  </div>
+                  <button>MIRAR DISPONIBILIDAD</button>
+                  <ul>
+                    <li>Habla con un especialista</li>
+                    <li><b>+39 075 505 7865</b></li>
+                    <li> o </li>
+                  </ul>
+                  <button>ADQUIRIR ABACO</button>
+                </div>
+              
+              </div>
+              <div class="informacion2">
+                <div class="instalaciones">
+                  <h1>Intalaciones</h1>
+                  <div class="indoor">
+                    <h3>INDOOR</h3>
+                    <div>
+                      <ul>
+                        <li> air conditioning A/C</li>
+                        <li>satellite TV</li>
+                        <li> sound system</li>
+                        <li>indoor Jacuzzi-hot tub</li>
+                        <li>fully equipped kitchen</li>
+                        <li>dishwasher</li>
+                        <li>wi-fi internet connection</li>
+                        <li>alarm system</li>
+                        <li>gym</li>
+                        <li>washing machine</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="outdoor">
+                    <h3>OUTDOOR</h3>
+                    <div>
+                      <ul>
+                        <li> private swimming pool</li>
+                        <li>outdoor furniture</li>
+                        <li> outdoor Jacuzzi-hot tub</li>
+                        <li>electric gate</li>
+                        <li>heated pool</li>
+                        <li>lounge area</li>
+                        <li>parking area</li>
+                      </ul>
+                    </div>
+                  </div>
+
+
+                </div>
+                <div class="reseñas">
+                  
+                  <h1>Reseñas</h1>
+                  <div>
+                  <ul>
+                    <li><b>Date:</b> Junio 2023</li>
+                    <li><b>Name:</b> Daniel Escobar</li>
+                    <li><b>Country:</b> Dinamarca</li>
+                    <li><b>Rate:</b> <i class="fa-solid fa-star fa-xs"></i><i class="fa-solid fa-star fa-xs"></i><i class="fa-solid fa-star fa-xs"></i><i class="fa-solid fa-star fa-xs"></i><i class="fa-solid fa-star fa-xs"></i></li>
+                </ul>
+                <p>‘’What a wonderful sanctuary we found in stunning Villa Ada. We enjoyed relaxing and meeting in the many beautiful living spaces- both indoors and in the glorious outdoor spaces. Villa Ada is perfectly situated to visit many lovely places in Umbria. We look forward to returning.’’</p>
+                </div>
+                <div>
+                  <ul>
+                    <li><b>Date:</b> Agosto 2023</li>
+                    <li><b>Name:</b> Elias Mouimi</li>
+                    <li><b>Country:</b> Nueva Zelanda</li>
+                    <li><b>Rate:</b> <i class="fa-solid fa-star fa-xs"></i><i class="fa-solid fa-star fa-xs"></i><i class="fa-solid fa-star fa-xs"></i><i class="fa-solid fa-star fa-xs"></i><i class="fa-solid fa-star fa-xs"></i></li>
+                </ul>
+                <p>"Villa situated in the heart of the Val D’Itria between Martina Franca, Ostuni and Cisternino with breathtaking views, so in one word perfect, Home In Italy assistance perfect and the villa is 5-star-property.
+                  If the is one thin that can be improved it would be the garbage bins : Ideally they would be a lot bigger and situated outside of the inner garden at the back of the house."</p>
+                
+                </div>
+
+                </div>
+              </div>
+
+            </article>
+        </section>
+        <footer>
+            <div>
+              <p><b>© 2023 Home In Italy s.a.s</b></p>
+              <p>Our mission is to select Italy's finest private residences for holiday rental to our discerning clients</p>
+              <p>Treat yourself to the very best of Italian luxury, and enjoy the unique experience!</p>
+              <p>Our strength is to provide the most attentive service together with the rentals.</p>
+              <p>Login</p>
+        
+              <p>Villa Owners</p>
+            </div>
+        
+            <div>
+        
+              <p><b>Encuentra más</b></p>
+              <ul>
+                <li>about us</li>
+                <li>booking conditions & forms</li>
+                <li>concierge service</li>
+                <li>special offers & last minute</li>
+              </ul>
+            </div>
+        
+            <div>
+              <p><b>Contactos</b></p>
+              <ul>
+                <li>Via Settevalli 131/F, 06128</li>
+                <li> Granada, SPAIN</li>
+                <li> eu +39 075 505 78 65</li>
+                <li> int. + 1 646 934 6864</li>
+                <li>info@homeinitaly.com</li>
+              </ul>
+            </div>
+          </footer>
+      </main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+</html>

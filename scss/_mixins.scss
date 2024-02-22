@@ -1,0 +1,57 @@
+@mixin menu-item {
+    padding: $menu-item-padding;
+    color: color('primary');
+    text-decoration: none;
+    :visited{
+      color: color('primary');
+    }
+    &:hover {
+      background-color: lighten(color('primary'), 10%);
+      :visited{
+        color: color('secondary');
+      }
+    }
+  }
+  
+  @mixin text-size($size) {
+    font-size: tamano($size);
+  }
+
+
+   
+  @mixin margen($margen) {
+    margin: margin($margen);
+}
+
+@mixin pesoFuente($peso) {
+  font-weight: font-weight($peso);
+}
+
+  
+  @mixin border-radius {
+    border: 0.1rem solid color('primary');
+    border-radius: 0.5rem;
+  }
+
+  @mixin responsive($size:sm) {
+    @media screen and (max-width: size($size)) {
+    @content;
+  }
+  }
+
+  @mixin boton-detalles {
+    padding-left: margin('xs');
+    padding-right: margin('xs');
+    padding-top: margin('xxs');
+    padding-bottom: margin('xxs');
+    background-color: color('secondary');
+    color: color('primary');
+    border: 1px solid color('primary');
+    @include text-size('xs');
+    @include pesoFuente('superlight');
+  
+    &:hover {
+      background-color: color('primary');
+      color: color('secondary');
+    }
+  }
