@@ -1,47 +1,44 @@
-const gulp = require('gulp');
-const sass = require('gulp-sass')(require('sass'));
-const cssnano = require('cssnano');
-const rename = require('gulp-rename');
+const {series, parallel, src, dest} = require ("gulp");
+const sass = require('gulp-dart-scss');
 const sassdoc = require('sassdoc');
+const processhtml = require('gulp-processhtml');
+var rename = require("gulp-rename");
+const cssmin = require('gulp-cssmin');
 
-function compilar() {
-    return gulp.src("scss/styles.scss")
-        .pipe(sass())
-        .pipe(gulp.dest("up/css/"));
+
+
+
+function concatenar(){
+    return src("css/css?.css").pipe(concat("style.css")).pipe(dest("css/"));
 }
 
-function minify_nano(){
-    return gulp.src("scss/styles.scss")
-    .pipe(sass())
-    .pipe(cssnano())
-    .pipe(rename({suffix:".nano", extname:".css"}))
-    .pipe(gulp.dest("up/css/"));
+function minimizar(){
+    return src("css/css?.css").pipe(concat("styles.css")).pipe(cssmin()).pipe(dest('css/'));
+}
+
+function min_rename(){
+    return src("css/css?.css").pipe(concat("styles.css")).pipe(cssmin()).pipe(rename({suffix:".min",extname:".css"})).pipe(dest("css/"));
+}
+
+var doc_options = {
+    dest:'docs'
+}
+
+function generar_docs(){
+    return src("scss/styles.scss").pipe(sassdoc(doc_options));
+}
+function html(){
+    return src('*.html').pipe(processhtml()).pipe(dest("subir/"));
 }
 
 function todo(){
-    return gulp.src("scss/styles.scss")
-    .pipe(sass())
-    .pipe(minify_nano())
-    .pipe(rename({
-        suffix:".min",
-        extname:".css"
-    }))
-    .pipe(gulp.dest("subir/assets/css/"));
+    return src("scss/styles.scss").pipe(sass()).pipe(cssmin()).pipe(rename({suffix:".min",extname:".css"})).pipe(dest("subir/assets/css/"))
 }
 
-function generar_docs() {
-    return gulp.src("scss/styles.scss")
-        .pipe(sassdoc());
-}
-
-function html(){
-    return gulp.src(".html")
-    .pipe(processhtml())
-    .pipe(gulp.dest("app"));
-}
-
-exports.compilar = compilar;
-exports.generar_docs = generar_docs;
-exports.todo = todo;
-exports.html = html;
-exports.default = gulp.series(compilar, generar_docs, todo, html);
+exports.concatena=concatenar;
+exports.minimiza=minimizar;
+exports.minimizayrenombra=min_rename;
+exports.todo=todo;
+exports.generar_docs=generar_docs;
+exports.paralelo=parallel(todo,generar_docs);
+exports.revisahtml=html;

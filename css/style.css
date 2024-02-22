@@ -1,5 +1,6 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Kdam+Thmor+Pro&display=swap");
 * {
   padding: 0;
   margin: 0;
@@ -38,6 +39,19 @@ header .menu {
   background-color: rgb(238, 245, 248);
 }
 
+section .slider .carousel img {
+  height: 60vw;
+}
+@media screen and (max-width: 992px) {
+  section .slider .carousel img {
+    height: 60vw;
+  }
+}
+@media screen and (max-width: 992px) {
+  section .slider .carousel .carousel-item {
+    height: 60vw;
+  }
+}
 section .slider h5 {
   margin-bottom: 400px;
   font-size: 3rem;
@@ -45,15 +59,18 @@ section .slider h5 {
 }
 section .partners {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: row;
   justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
   background-color: #333;
   column-gap: 20px;
 }
 section .about {
   display: flex;
-  align-items: center;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   margin-top: 50px;
   margin-bottom: 100px;
 }
@@ -88,10 +105,30 @@ section .about .features {
   width: 60vw;
   column-gap: 20px;
 }
+@media screen and (max-width: 992px) {
+  section .about .features {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 0;
+  }
+}
 section .about .features .aspect {
   display: flex;
+  flex-direction: row;
+  justify-content: center;
   align-items: center;
   column-gap: 15px;
+}
+@media screen and (max-width: 576px) {
+  section .about .features .aspect {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+@media screen and (max-width: 992px) {
+  section .about .features .aspect {
+    width: 80vw;
+  }
 }
 section .about .features .aspect .icon {
   font-size: 2rem;
@@ -99,32 +136,50 @@ section .about .features .aspect .icon {
 section .about .features h5 {
   font-weight: 500;
 }
-section .reseñas h1 {
+@media screen and (max-width: 576px) {
+  section .opiniones {
+    margin-bottom: 35px;
+    display: none;
+  }
+}
+section .opiniones h1 {
   font-weight: 100;
   text-align: center;
 }
-section .reseñas .slide .carousel-item {
+section .opiniones .slide .carousel-item {
   height: 450px;
 }
-section .reseñas .slide .opinion {
+section .opiniones .slide .opinion {
   margin: 150px;
   text-align: center;
 }
-section .reseñas .slide .opinion img {
+section .opiniones .slide .opinion img {
   height: 22px;
 }
-section .reseñas .slide .opinion p {
+section .opiniones .slide .opinion p {
   font-weight: 100;
   font-size: 1.35rem;
 }
-section .reseñas .slide .opinion p:last-child {
+section .opiniones .slide .opinion p:last-child {
   font-size: 1.15rem;
 }
-section .reseñas .slide .carousel-control-prev-icon, section .reseñas .slide .carousel-control-next-icon {
+section .opiniones .slide .carousel-control-prev-icon, section .opiniones .slide .carousel-control-next-icon {
   filter: invert(108%);
 }
-section .reseñas .slide .button {
+section .opiniones .slide .button {
   filter: invert(108%);
+}
+@media screen and (max-width: 992px) {
+  section .revista img {
+    width: 35vw !important;
+    margin-left: 50px;
+  }
+}
+@media screen and (max-width: 576px) {
+  section .revista img {
+    width: 80vw !important;
+    margin-left: 35px;
+  }
 }
 section .revista h1 {
   font-weight: 100;
@@ -151,7 +206,7 @@ section .revista .revista-container .revista-item .content h3 {
 }
 section .revista .revista-container .revista-item .content p {
   text-align: left;
-  font-weight: 100;
+  font-weight: 300;
   font-size: 1.15rem;
   color: rgba(72, 72, 72, 0.7725490196);
 }
@@ -225,6 +280,7 @@ section .vivienda .carousel .heart-container .svg-container {
   width: 100%;
   height: 100%;
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
 }
@@ -301,9 +357,10 @@ section .vivienda .content hr {
 }
 section .vivienda .content div:first-of-type {
   display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   align-items: flex-start;
   height: 20px;
-  justify-content: space-between;
 }
 @media screen and (max-width: 576px) {
   section .vivienda .content div:first-of-type {
@@ -312,8 +369,9 @@ section .vivienda .content div:first-of-type {
 }
 section .vivienda .content div:last-of-type {
   display: flex;
-  align-items: flex-start;
+  flex-direction: row;
   justify-content: space-between;
+  align-items: flex-start;
   margin-top: 35px;
 }
 section .vivienda .content div:last-of-type button {
@@ -351,6 +409,8 @@ section .detalles h1 {
 section .detalles .informacion1 {
   display: flex;
   flex-direction: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
   column-gap: 50px;
   margin-top: 35px;
 }
@@ -370,6 +430,7 @@ section .detalles .informacion1 .flex-left {
 }
 section .detalles .informacion1 .flex-left .info-base {
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   align-items: center;
 }
@@ -377,6 +438,7 @@ section .detalles .informacion1 .flex-left .info-base {
   section .detalles .informacion1 .flex-left .info-base {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     align-items: center;
     text-align: center;
   }
@@ -384,6 +446,8 @@ section .detalles .informacion1 .flex-left .info-base {
 section .detalles .informacion1 .wish {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+  align-items: none;
   width: 35vw;
   background-color: rgb(238, 245, 248);
   padding: 20px;
@@ -466,11 +530,15 @@ section .detalles .instalaciones {
   padding: 20px;
   display: flex;
   flex-direction: column;
+  justify-content: none;
+  align-items: none;
   background-color: rgb(238, 245, 248);
 }
 section .detalles .instalaciones .indoor, section .detalles .instalaciones .outdoor {
   display: flex;
   flex-direction: column;
+  justify-content: none;
+  align-items: none;
 }
 section .detalles .instalaciones .indoor h3, section .detalles .instalaciones .outdoor h3 {
   text-align: center;
@@ -498,6 +566,8 @@ section .detalles .instalaciones .indoor ul, section .detalles .instalaciones .o
     column-count: 1;
     display: flex;
     flex-direction: column;
+    justify-content: none;
+    align-items: none;
   }
 }
 section .detalles .instalaciones .indoor ul li, section .detalles .instalaciones .outdoor ul li {
@@ -529,8 +599,18 @@ footer {
   flex-wrap: wrap;
 }
 
+header h5 {
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-size: xx-large;
+  font-style: normal;
+}
 header .navbar-brand {
   margin-right: 60vw;
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-size: xx-large;
+  font-style: normal;
 }
 @media screen and (max-width: 992px) {
   header .navbar-brand {
@@ -539,14 +619,12 @@ header .navbar-brand {
 }
 header .nav-item {
   margin-right: 10px;
-  border-right: 1px solid white;
-  border-left: 1px solid white;
 }
-header .nav-item:last-child {
-  border-right: none;
+header .nav-item .nav-link {
+  border-radius: 10px;
 }
-header .nav-item:first-child {
-  border-left: none;
+header .nav-item .nav-link:hover {
+  background-color: rgba(255, 102, 0, 0.6);
 }
 header .menu {
   background-color: rgba(255, 255, 255, 0.815);

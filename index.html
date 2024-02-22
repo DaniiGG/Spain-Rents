@@ -3,14 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!--build:css css/main.min.css-->
+  <!--build:css assets/css/styles.min.css-->
   <link rel="stylesheet" href="css/style.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
   <script src="https://kit.fontawesome.com/8fd2dbd2a5.js" crossorigin="anonymous"></script>
+  <link rel="icon" href="img/SpainRents.ico" type="image/x-icon">
   <title>Spain Rents</title>
 </head>
 <body>
-
+<!--Inicio del nav-->
   <header>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <div class="container-fluid">
@@ -43,6 +44,8 @@
       </div>
     </nav>
 
+
+  <!--Inicio Submenu-->
     <div class="menu">
       <div class="menu-item dropdown">
           <label for="buscar"><i class="fa-solid fa-magnifying-glass fa-xl"></i></label>
@@ -72,10 +75,13 @@
       </div>
       <button class="boton-buscar">Buscar</button>
   </div>
+  <!--Se acaba Submenu-->
   </header>
+  <!--Fin del nav-->
 
   <main>
     <section>
+      <!--Aqui empieza el slider principal-->
     <article class="slider">
     
     <div id="carouselExampleCaptions" class="carousel slide">
@@ -86,19 +92,19 @@
       </div>
       <div class="carousel-inner">
         <div class="carousel-item active">
-          <img src="img/casabosquehombre.jpg" class="d-block vw-100 vh-100" alt="...">
+          <img src="img/casabosquehombre.jpg" class="d-block vw-100" alt="...">
           <div class="carousel-caption d-none d-md-block">
             <h5>Home in Spain</h5>
           </div>
         </div>
         <div class="carousel-item">
-          <img src="img/casaenelbosque.jpeg" class="d-block vw-100 vh-100" alt="...">
+          <img src="img/casaenelbosque.jpeg" class="d-block vw-100" alt="...">
           <div class="carousel-caption d-none d-md-block">
             <h5>Second slide label</h5>
           </div>
         </div>
         <div class="carousel-item">
-          <img src="img/casapiscina.jpeg" class="d-block vw-100 vh-100" alt="...">
+          <img src="img/casapiscina.jpeg" class="d-block vw-100" alt="...">
           <div class="carousel-caption d-none d-md-block">
             <h5>Third slide label</h5>
           </div>
@@ -114,6 +120,9 @@
       </button>
     </div>
   </article>
+  <!--Aqui acaba el slider principal-->
+
+    <!--Esta es la sección de los patrocinadores-->
     <article class="partners">
       
       <div class="img-partner"><img src="https://www.homeinitaly.com/img/partner-vogue-logo_11-22.png"></div>
@@ -123,6 +132,8 @@
       <div class="img-partner"><img src="	https://www.homeinitaly.com/img/partner-condenast-traveller-logo_11-22.png"></div>
     </article>
 
+
+    <!--Aqui empieza Características-->
     <article class="about">
       <h1>VILLAS DE LUJO Y ALQUILERES VACACIONALES EN ESPAÑA</h1>
       <div class="features">
@@ -162,9 +173,12 @@
       
       
     </article>
+    <!--Aqui acaba Características-->
 
-    <article class="reseñas">
-      <h1>RESEÑAS DE INVITADOS</h1>
+
+  <!--Aqui empieza el slider de las opiniones-->
+    <article class="opiniones">
+      <h1>OPINIONES DE INVITADOS</h1>
 
       <div id="carouselExampleIndicators" class="carousel slide">
         <div class="carousel-indicators">
@@ -205,8 +219,9 @@
         </button>
       </div>
     </article>
+    <!--Aqui acaba el slider de las opiniones-->
 
-
+  <!--Aqui empieza la parte de revistas-->
     <article class="revista">
       <h1>MAGAZINE</h1>
       <p>stay up-to-date with the best places to visit, undiscovered sites, history, curiosities of the Italian country!</p>
@@ -252,13 +267,11 @@
     </div>
 
     </article>
+    <!--Aqui acaba la parte de revistas-->
 
-    <article>
-      
-    </article>
 
   </section>
-
+  <!--Aqui empieza el footer-->
   <footer>
     <div>
       <p><b>© 2023 Home In Italy s.a.s</b></p>
@@ -292,7 +305,7 @@
       </ul>
     </div>
   </footer>
-  
+  <!--Aqui acaba el footer-->
    
   </main>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>

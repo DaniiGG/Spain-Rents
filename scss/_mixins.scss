@@ -1,37 +1,10 @@
-@mixin menu-item {
-    padding: $menu-item-padding;
-    color: color('primary');
-    text-decoration: none;
-    :visited{
-      color: color('primary');
-    }
-    &:hover {
-      background-color: lighten(color('primary'), 10%);
-      :visited{
-        color: color('secondary');
-      }
-    }
-  }
-  
-  @mixin text-size($size) {
+@mixin text-size($size:s) {
     font-size: tamano($size);
   }
 
-
-   
-  @mixin margen($margen) {
-    margin: margin($margen);
-}
-
-@mixin pesoFuente($peso) {
+@mixin pesoFuente($peso:s) {
   font-weight: font-weight($peso);
 }
-
-  
-  @mixin border-radius {
-    border: 0.1rem solid color('primary');
-    border-radius: 0.5rem;
-  }
 
   @mixin responsive($size:sm) {
     @media screen and (max-width: size($size)) {
@@ -55,3 +28,15 @@
       color: color('secondary');
     }
   }
+
+  /// Mixin para crear un bloque flex
+/// @param {string} $direction [row] 
+/// @param {string} $justify [center] 
+/// @param {string} $align [center] 
+
+@mixin flexposition($direction:row, $justify:center, $align:center){
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+}

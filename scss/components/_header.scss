@@ -1,9 +1,17 @@
-$color-boton: #ff6600;
-
 header{
 // Estilos del menú
+  h5{
+    font-family: "Bebas Neue", sans-serif;
+      font-weight: 400;
+      font-size: xx-large;
+      font-style: normal;
+  }
  .navbar-brand {
       margin-right: 60vw;
+      font-family: "Bebas Neue", sans-serif;
+      font-weight: 400;
+      font-size: xx-large;
+      font-style: normal;
       
       @include responsive(lg) {
         margin-right: 0;
@@ -11,15 +19,14 @@ header{
     }
     .nav-item{
       margin-right: margin("xxs");
-      
-      border-right: 1px solid white;
-      border-left: 1px solid white;
-    }
-    .nav-item:last-child{
-      border-right: none;
-    }
-    .nav-item:first-child{
-      border-left: none;
+
+      .nav-link{
+        border-radius: 10px;
+        &:hover{
+          background-color:  rgba(color("hover-menu"), 0.6);
+        
+        }
+      }
     }
 
 .menu {
@@ -47,7 +54,7 @@ input{
 
 // Estilos específicos para el botón de buscar
 .boton-buscar {
-  background-color: $color-boton;
+  background-color: color("hover-menu");
   color:  color("secondary");
   padding: margin("xxs") margin("xs");
   border: none;
@@ -55,7 +62,7 @@ input{
   transition: background-color 0.3s;
   
   &:hover {
-    background-color: darken($color-boton, 10%);
+    background-color: darken(color("hover-menu"), 10%);
   }
 }
 

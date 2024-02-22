@@ -4,6 +4,20 @@
 section {
     .slider{
 
+      .carousel{
+        img{
+          height: height("lg");
+          @include responsive(lg){
+            height: height("lg");
+        }
+        }
+        .carousel-item{
+          @include responsive(lg){
+            height: height("lg");
+        }
+        }
+      }
+      
       h5{
         margin-bottom: margin('max');
         @include text-size('xl');
@@ -12,22 +26,18 @@ section {
     }
   
   .partners{
-    display: flex;
+    @include flexposition($direction:row, $justify:center, $align:center);
     flex-wrap: wrap;
-    justify-content: center;
     background-color: color('primary');
     column-gap: gap('sm');
 
   }
   .about{
-    display: flex;
-    align-items: center;
-    flex-direction: column;
+    @include flexposition($direction:column, $justify:center, $align:center);
     margin-top: margin('sm');
     margin-bottom: margin('lg');
     
-   
-
+    
     h1{
       @include pesoFuente('superlight');
       text-align: center;
@@ -62,15 +72,30 @@ section {
       grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); 
       width: 60vw;
       column-gap: 20px;
-      
+  
+      @include responsive(lg){
+        display: flex;
+        flex-wrap: wrap;
+        margin-left: 0;
+        
+    }
       
       .aspect{
-        display:flex;
-        align-items: center;
+        @include flexposition($direction:row, $justify:center, $align:center);
         column-gap: 15px;
+        @include responsive(sm){
+          flex-direction: column;
+          text-align: center;
+          
+      }
+        @include responsive(lg){
+          width: width("xl");
+      }
         
         
-        .icon{font-size: 2rem
+        .icon{
+          font-size: 2rem;
+          
         
         }
       }
@@ -80,7 +105,12 @@ section {
       }
     }
   }
-  .reseñas{
+  .opiniones{
+
+    @include responsive(sm){
+     margin-bottom: margin("s");
+     display: none
+  }
     h1{
       @include pesoFuente('superlight');
       text-align: center;
@@ -88,12 +118,11 @@ section {
     }
     .slide{
       .carousel-item{
-        height: 450px
-        
+        height: 450px;
       }
 
       .opinion{
-        @include margen('xl');
+        margin: margin('xl');
         text-align: center;
         img{
           height: 22px
@@ -122,7 +151,16 @@ section {
   }
   .revista{
     
-
+    img{
+      @include responsive(lg){
+        width: width("sm") !important;
+        margin-left: margin("sm")
+     }
+     @include responsive(sm){
+      width: width("xl") !important;
+      margin-left: margin("s")
+   }
+    }
     h1{
       @include pesoFuente('superlight');
       text-align: center;
@@ -148,14 +186,14 @@ section {
 
       .content{
          
-        @include margen('s');
+        margin: margin('s');
 
         h3{
           @include pesoFuente('superlight');
         }
         p{
           text-align: left;
-          @include pesoFuente('superlight');
+          @include pesoFuente('light');
           @include text-size('xs');
           color: color('texto-revista');
         }
@@ -233,9 +271,7 @@ section {
         .heart-container .svg-container {
           width: 100%;
           height: 100%;
-          display: flex;
-          justify-content: center;
-          align-items: center;
+          @include flexposition($direction:row, $justify:center, $align:center);
         }
         
         .heart-container .svg-outline,
@@ -322,18 +358,15 @@ section {
         } 
 
         div:first-of-type{
-          display: flex;
-          align-items: flex-start;
+          @include flexposition($direction:row, $justify:space-between, $align:flex-start);
           height: gap("sm");
-          justify-content: space-between;
           @include responsive(sm){
            display: flex;
         }
         }
         div:last-of-type{
-          display: flex;
-          align-items: flex-start;
-          justify-content: space-between;
+          @include flexposition($direction:row, $justify:space-between, $align:flex-start);
+        
           margin-top: margin('s');
 
           button{
@@ -386,8 +419,7 @@ section {
 
 
     .informacion1{
-      display: flex;
-      flex-direction: wrap;
+      @include flexposition($direction:wrap, $justify:space-between, $align:flex-start);
       column-gap: gap("md");
       margin-top: margin("s");
       @include responsive(lg){
@@ -403,22 +435,18 @@ section {
           width: width("xxl");
         }
         .info-base{
-
-          display:flex;
-          justify-content: space-between;
-          align-items: center;
+          @include flexposition($direction:row, $justify:space-between, $align:center);
+         
           @include responsive(sm){
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+            @include flexposition($direction:column, $justify:space-between, $align:center);
             text-align: center;
          }
   
         }
       }
       .wish{
-        display: flex;
-        flex-direction: column;
+        @include flexposition($direction:column, $justify:space-between, $align:none);
+        
         width: width("sm");
         background-color: color("body-back");
         padding: 20px;
@@ -502,12 +530,11 @@ section {
     }
     .instalaciones{
       padding: margin("xs");
-      display:flex;
-      flex-direction: column;
+      @include flexposition($direction:column, $justify:none, $align:none);
       background-color: color("body-back");
       .indoor, .outdoor{
-        display: flex;
-        flex-direction: column;
+        @include flexposition($direction:column, $justify:none, $align:none);
+       
       
 
         h3{
@@ -531,9 +558,8 @@ section {
           }
           @include responsive(sm){
             column-count: 1; 
-            display: flex;
-            flex-direction: column;
-           
+            @include flexposition($direction:column, $justify:none, $align:none);
+            
           }
   
           li{
@@ -553,12 +579,14 @@ section {
 
     .reseñas{
       padding: margin("xs");
+      
       ul{
         padding: 0;
         list-style: none;
         li{
           @include text-size('xs');
           @include pesoFuente('light');
+          
         }
       }
     }

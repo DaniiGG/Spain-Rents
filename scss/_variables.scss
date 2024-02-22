@@ -1,5 +1,8 @@
 //// @author @descobar
 
+//Colores que se van a utilizar en todo el proyecto
+/// @group colores
+/// 
 $colors: (
     primary: #333,
     secondary: rgba(255, 255, 255, 0.933),
@@ -7,14 +10,20 @@ $colors: (
     quaternary: #3da9fb,
     texto-revista:#484848c5,
     body-back: rgb(238, 245, 248),
-    submenu: rgba(255, 255, 255, 0.815)
+    submenu: rgba(255, 255, 255, 0.815),
+    hover-menu: #ff6600
 );
 
+//funcion para poner un color predeterminado
+/// @param {string} $color-name 
+/// @return {color-name} color - en hexadecimal
+/// @group colores
 @function color($color-name) {
     @return map-get($colors, $color-name);
 }
 
-
+//Variables del tamaño que pueden tener las fuentes
+/// @group tamaño-fuente
 $tamano:(
     xxl:6rem,
     xl:3rem,
@@ -29,12 +38,17 @@ $tamano:(
 
 );
 
+//funcion para poner una fuente predeterminada
+/// @param {string} $size 
+/// @return {size} 
+/// @group tamaño-fuente
 @function tamano($size){
     @return map-get($tamano, $size);
 }
 
 
-
+//Variables del tamaño que pueden tener los margenes
+/// @group margenes
 $margins:(
     max:400px,
     xxxl:320px,
@@ -50,11 +64,16 @@ $margins:(
 
 );
 
+//funcion para poner un margen predeterminada
+/// @param {string} $margin 
+/// @return {margin} 
+/// @group margenes
 @function margin($margin){
     @return map-get($margins, $margin);
 }
 
-
+//Variables del tamaño que pueden tener los gaps
+/// @group gaps
 $gaps:(
     xxxl:200px,
     xxl:150px,
@@ -66,11 +85,16 @@ $gaps:(
 
 );
 
+//funcion para poner un gap predeterminada
+/// @param {string} $gap 
+/// @return {gap} 
+/// @group gaps
 @function gap($gap){
     @return map-get($gaps, $gap);
 }
 
-
+//Variables del tamaño de ancho que pueden tener los divs
+/// @group anchos
 $widths:(
     xxl:100vw,
     xl:80vw,
@@ -83,11 +107,16 @@ $widths:(
 
 );
 
+//funcion para poner un ancho predeterminada
+/// @param {string} $width 
+/// @return {width} 
+/// @group anchos
 @function width($width){
     @return map-get($widths, $width);
 }
 
-
+//Variables del tamaño de alto que pueden tener los divs
+/// @group altos
 $heights:(
     max:max-content,
     xxl:100vw,
@@ -100,11 +129,17 @@ $heights:(
 
 );
 
+
+//funcion para poner una altura predeterminada
+/// @param {string} $height 
+/// @return {height} 
+/// @group altos
 @function height($height){
     @return map-get($heights, $height);
 }
 
-
+//Variables del peso de una fuente predeterminada
+/// @group peso-fuente
 $font-weights: (
     superlight:100,
     light: 300,
@@ -114,16 +149,29 @@ $font-weights: (
     extra-bold: 800,
 );
 
+
+//funcion para poner un peso de fuente predeterminada
+/// @param {string} $weight 
+/// @return {weight} 
+/// @group peso-fuente
 @function font-weight($weight) {
     @return map-get($font-weights, $weight);
 }
 
+//Variables para poner un tamaño para mediaquery predeterminada
+/// @group media-query
 $sizesr: (
   sm: 576px,
   md: 768px,
   lg: 992px,
-  xl: 1200px
+  xl: 1200px,
+  xxl:1370px
 );
+
+//funcion para poner un tamaño para mediaquery predeterminada
+/// @param {string} $size 
+/// @return {size} 
+/// @group media-query
 @function size($size){
   @return map-get($sizesr, $size);
 }
