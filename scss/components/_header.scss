@@ -49,6 +49,7 @@ input{
   margin-right: margin("xs");
   @include responsive(lg) {
    margin-bottom: margin("xs");
+    @include text-size('s');
   }
 }
 

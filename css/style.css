@@ -136,6 +136,16 @@ section .about .features .aspect .icon {
 section .about .features h5 {
   font-weight: 500;
 }
+@media screen and (max-width: 992px) {
+  section .about .features h5 {
+    font-size: 1.8rem;
+  }
+}
+@media screen and (max-width: 992px) {
+  section .about .features p {
+    font-size: 1.35rem;
+  }
+}
 @media screen and (max-width: 576px) {
   section .opiniones {
     margin-bottom: 35px;
@@ -172,13 +182,6 @@ section .opiniones .slide .button {
 @media screen and (max-width: 992px) {
   section .revista img {
     width: 35vw !important;
-    margin-left: 50px;
-  }
-}
-@media screen and (max-width: 576px) {
-  section .revista img {
-    width: 80vw !important;
-    margin-left: 35px;
   }
 }
 section .revista h1 {
@@ -194,21 +197,46 @@ section .revista .revista-container {
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   column-gap: 20px;
 }
+@media screen and (max-width: 992px) {
+  section .revista .revista-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
 section .revista .revista-container .revista-item img {
   height: widht("s");
   width: 23vw;
+}
+@media screen and (max-width: 992px) {
+  section .revista .revista-container .revista-item img {
+    width: 100vw !important;
+  }
 }
 section .revista .revista-container .revista-item .content {
   margin: 35px;
 }
 section .revista .revista-container .revista-item .content h3 {
-  font-weight: 100;
+  font-weight: 300;
+}
+@media screen and (max-width: 992px) {
+  section .revista .revista-container .revista-item .content h3 {
+    font-size: 2.5rem;
+    font-weight: 400;
+  }
 }
 section .revista .revista-container .revista-item .content p {
   text-align: left;
   font-weight: 300;
   font-size: 1.15rem;
   color: rgba(72, 72, 72, 0.7725490196);
+}
+@media screen and (max-width: 992px) {
+  section .revista .revista-container .revista-item .content p {
+    font-size: 1.8rem;
+    font-weight: 400;
+  }
 }
 section .revista .revista-container .revista-item .content button {
   padding-left: 20px;
@@ -241,6 +269,11 @@ section .vivienda {
 }
 section .vivienda h1 {
   font-weight: 300;
+}
+@media screen and (max-width: 992px) {
+  section .vivienda h1 {
+    font-size: 2.5rem;
+  }
 }
 section .vivienda .carousel img {
   height: 450px;
@@ -342,6 +375,11 @@ section .vivienda .content p {
   font-weight: 100;
   font-size: 1.15rem;
 }
+@media screen and (max-width: 992px) {
+  section .vivienda .content p {
+    font-size: 1.8rem;
+  }
+}
 section .vivienda .content ul {
   list-style-type: none;
   margin-left: 0;
@@ -406,6 +444,11 @@ section .vivienda .content div:last-of-type button:hover {
 section .detalles h1 {
   font-weight: 300;
 }
+@media screen and (max-width: 992px) {
+  section .detalles h1 {
+    font-size: 3rem;
+  }
+}
 section .detalles .informacion1 {
   display: flex;
   flex-direction: wrap;
@@ -443,6 +486,11 @@ section .detalles .informacion1 .flex-left .info-base {
     text-align: center;
   }
 }
+@media screen and (max-width: 992px) {
+  section .detalles .informacion1 .flex-left .info-base p {
+    font-weight: 400;
+  }
+}
 section .detalles .informacion1 .wish {
   display: flex;
   flex-direction: column;
@@ -459,6 +507,11 @@ section .detalles .informacion1 .wish ul {
   margin-bottom: 20px;
   font-weight: 300;
   font-size: 1.15rem;
+}
+@media screen and (max-width: 992px) {
+  section .detalles .informacion1 .wish ul {
+    font-size: 1.8rem;
+  }
 }
 @media screen and (max-width: 992px) {
   section .detalles .informacion1 .wish {
@@ -522,9 +575,19 @@ section .detalles .informacion1 .wish button:hover {
   background-color: #333;
   color: rgba(255, 255, 255, 0.933);
 }
+@media screen and (max-width: 992px) {
+  section .detalles .informacion1 .wish button {
+    font-size: 1.8rem;
+  }
+}
 section .detalles .informacion1 p {
   font-size: 1.15rem;
   font-weight: 300;
+}
+@media screen and (max-width: 992px) {
+  section .detalles .informacion1 p {
+    font-size: 1.8rem;
+  }
 }
 section .detalles .instalaciones {
   padding: 20px;
@@ -556,12 +619,12 @@ section .detalles .instalaciones .indoor ul, section .detalles .instalaciones .o
   column-gap: 20px;
   list-style: none;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 992px) {
   section .detalles .instalaciones .indoor ul, section .detalles .instalaciones .outdoor ul {
     column-count: 2;
   }
 }
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 768px) {
   section .detalles .instalaciones .indoor ul, section .detalles .instalaciones .outdoor ul {
     column-count: 1;
     display: flex;
@@ -574,6 +637,11 @@ section .detalles .instalaciones .indoor ul li, section .detalles .instalaciones
   font-size: 1.15rem;
   font-weight: 300;
 }
+@media screen and (max-width: 992px) {
+  section .detalles .instalaciones .indoor ul li, section .detalles .instalaciones .outdoor ul li {
+    font-size: 1.8rem;
+  }
+}
 section .detalles .instalaciones .indoor ul li::before, section .detalles .instalaciones .outdoor ul li::before {
   font-family: "Font Awesome 5 Free";
   content: "\f14a";
@@ -582,6 +650,12 @@ section .detalles .instalaciones .indoor ul li::before, section .detalles .insta
 section .detalles .reseñas {
   padding: 20px;
 }
+@media screen and (max-width: 992px) {
+  section .detalles .reseñas p {
+    font-size: 1.35rem;
+    font-weight: 300;
+  }
+}
 section .detalles .reseñas ul {
   padding: 0;
   list-style: none;
@@ -589,6 +663,11 @@ section .detalles .reseñas ul {
 section .detalles .reseñas ul li {
   font-size: 1.15rem;
   font-weight: 300;
+}
+@media screen and (max-width: 992px) {
+  section .detalles .reseñas ul li {
+    font-size: 1.35rem;
+  }
 }
 
 footer {
@@ -644,6 +723,7 @@ header .menu-item {
 @media screen and (max-width: 992px) {
   header .menu-item {
     margin-bottom: 20px;
+    font-size: 1.35rem;
   }
 }
 header .boton-buscar {
@@ -676,9 +756,24 @@ footer {
 footer div p:first-child {
   font-size: 1.15rem;
 }
+@media screen and (max-width: 992px) {
+  footer div p:first-child {
+    font-size: 1.35rem;
+  }
+}
+@media screen and (max-width: 992px) {
+  footer div p {
+    font-size: 1.35rem;
+  }
+}
 footer ul {
   list-style: none;
   padding-left: 0;
+}
+@media screen and (max-width: 992px) {
+  footer ul {
+    font-size: 1.35rem;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

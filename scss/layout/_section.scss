@@ -102,6 +102,14 @@ section {
 
       h5{
         @include pesoFuente('medium');
+        @include responsive(lg){
+          @include text-size('sm');
+      }
+      }
+      p{
+        @include responsive(lg){
+          @include text-size('s');
+      }
       }
     }
   }
@@ -154,12 +162,7 @@ section {
     img{
       @include responsive(lg){
         width: width("sm") !important;
-        margin-left: margin("sm")
      }
-     @include responsive(sm){
-      width: width("xl") !important;
-      margin-left: margin("s")
-   }
     }
     h1{
       @include pesoFuente('superlight');
@@ -176,12 +179,19 @@ section {
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)) ;
       
       column-gap: margin("xs");
+
+      @include responsive(lg){
+        @include flexposition($direction:column, $justify:center, $align:center);
+     }
     
     .revista-item{
 
       img{
         height: widht('s');
         width: width('s');
+        @include responsive(lg){
+          width: width('xxl') !important;
+       }
       }
 
       .content{
@@ -189,13 +199,23 @@ section {
         margin: margin('s');
 
         h3{
-          @include pesoFuente('superlight');
+          @include pesoFuente('light');
+
+          @include responsive(lg){
+            @include text-size('lg');
+            @include pesoFuente('regular');
+        }
         }
         p{
           text-align: left;
           @include pesoFuente('light');
           @include text-size('xs');
           color: color('texto-revista');
+
+          @include responsive(lg){
+            @include text-size('sm');
+            @include pesoFuente('regular');
+        }
         }
         button{
           padding-left: margin('xs');
@@ -232,6 +252,9 @@ section {
     margin-bottom: margin('xxs');
     h1{
       @include pesoFuente('light');
+      @include responsive(lg){
+        @include text-size('lg');
+    }
     }
     
       .carousel{
@@ -341,6 +364,9 @@ section {
         p{
           @include pesoFuente('superlight');
           @include text-size('xs');
+          @include responsive(lg){
+            @include text-size('sm');
+        }
         }
         ul{
           list-style-type: none;
@@ -414,6 +440,10 @@ section {
     
     h1{
       @include pesoFuente('light');
+        @include responsive(lg){
+          @include text-size('xl')
+          
+      }
     }
 
 
@@ -442,6 +472,13 @@ section {
             text-align: center;
          }
   
+
+         p{
+          @include responsive(lg){
+            @include pesoFuente('regular');
+            
+        }
+         }
         }
       }
       .wish{
@@ -458,6 +495,9 @@ section {
           margin-bottom: margin("xs");
           @include pesoFuente('light');
           @include text-size('xs');
+          @include responsive(lg){
+            @include text-size('sm');
+        }
 
         }
 
@@ -516,12 +556,23 @@ section {
 
         button{
           @include boton-detalles;
+
+          @include responsive(lg){
+            @include text-size('sm')
+            
+        }
+          
         }
         
       }
       p{
         @include text-size('xs');
         @include pesoFuente('light');
+
+        @include responsive(lg){
+          @include text-size('sm')
+          
+      }
       }
 
 
@@ -553,18 +604,23 @@ section {
           column-gap: gap("sm"); 
           list-style: none;
 
-          @include responsive(md){
+
+          @include responsive(lg){
             column-count: 2; 
           }
-          @include responsive(sm){
+          @include responsive(md){
             column-count: 1; 
             @include flexposition($direction:column, $justify:none, $align:none);
-            
           }
+          
   
           li{
             @include text-size('xs');
             @include pesoFuente('light');
+
+            @include responsive(lg){
+              @include text-size('sm');
+          }
           }
 
           li::before {
@@ -579,6 +635,13 @@ section {
 
     .reseñas{
       padding: margin("xs");
+
+      p{
+        @include responsive(lg){
+          @include text-size('s');
+          @include pesoFuente('light');
+      }
+      }
       
       ul{
         padding: 0;
@@ -586,6 +649,10 @@ section {
         li{
           @include text-size('xs');
           @include pesoFuente('light');
+
+          @include responsive(lg){
+            @include text-size('s');
+        }
           
         }
       }

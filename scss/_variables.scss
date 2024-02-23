@@ -1,5 +1,3 @@
-//// @author @descobar
-
 //Colores que se van a utilizar en todo el proyecto
 /// @group colores
 /// 
@@ -8,15 +6,15 @@ $colors: (
     secondary: rgba(255, 255, 255, 0.933),
     tertiary: #cfcdcd,
     quaternary: #3da9fb,
-    texto-revista:#484848c5,
+    texto-revista: #484848c5,
     body-back: rgb(238, 245, 248),
     submenu: rgba(255, 255, 255, 0.815),
     hover-menu: #ff6600
 );
 
 //funcion para poner un color predeterminado
-/// @param {string} $color-name 
-/// @return {color-name} color - en hexadecimal
+/// @param {string} $color-name - Color en formato de cadena de texto.
+/// @return {color-name} Devuelve el color en formato hexadecimal.
 /// @group colores
 @function color($color-name) {
     @return map-get($colors, $color-name);
@@ -35,17 +33,15 @@ $tamano:(
     xxs:1rem,
     xxxs:0.75rem,
     mini:0.5rem
-
 );
 
 //funcion para poner una fuente predeterminada
-/// @param {string} $size 
-/// @return {size} 
+/// @param {string} $size - Tamaño de la fuente en formato de cadena de texto.
+/// @return {size} Devuelve el tamaño de la fuente.
 /// @group tamaño-fuente
 @function tamano($size){
     @return map-get($tamano, $size);
 }
-
 
 //Variables del tamaño que pueden tener los margenes
 /// @group margenes
@@ -61,12 +57,11 @@ $margins:(
     s:35px,
     xs:20px,
     xxs:10px,
-
 );
 
-//funcion para poner un margen predeterminada
-/// @param {string} $margin 
-/// @return {margin} 
+//funcion para poner un margen predeterminado
+/// @param {string} $margin - Margen en formato de cadena de texto.
+/// @return {margin} Devuelve el margen.
 /// @group margenes
 @function margin($margin){
     @return map-get($margins, $margin);
@@ -82,12 +77,11 @@ $gaps:(
     md:50px,
     sm:20px,
     xs:10px,
-
 );
 
-//funcion para poner un gap predeterminada
-/// @param {string} $gap 
-/// @return {gap} 
+//funcion para poner un gap predeterminado
+/// @param {string} $gap - Tamaño del gap en formato de cadena de texto.
+/// @return {gap} Devuelve el gap.
 /// @group gaps
 @function gap($gap){
     @return map-get($gaps, $gap);
@@ -104,12 +98,11 @@ $widths:(
     sm:35vw,
     s:23vw,
     xs:20vw,
-
 );
 
-//funcion para poner un ancho predeterminada
-/// @param {string} $width 
-/// @return {width} 
+//funcion para poner un ancho predeterminado
+/// @param {string} $width - Ancho en formato de cadena de texto.
+/// @return {width} Devuelve el ancho.
 /// @group anchos
 @function width($width){
     @return map-get($widths, $width);
@@ -126,13 +119,11 @@ $heights:(
     sm:30vw,
     s:20vw,
     xs:10vw,
-
 );
 
-
 //funcion para poner una altura predeterminada
-/// @param {string} $height 
-/// @return {height} 
+/// @param {string} $height - Alto en formato de cadena de texto.
+/// @return {height} Devuelve la altura.
 /// @group altos
 @function height($height){
     @return map-get($heights, $height);
@@ -149,16 +140,15 @@ $font-weights: (
     extra-bold: 800,
 );
 
-
-//funcion para poner un peso de fuente predeterminada
-/// @param {string} $weight 
-/// @return {weight} 
+//funcion para poner un peso de fuente predeterminado
+/// @param {string} $weight - Peso de la fuente en formato de cadena de texto.
+/// @return {weight} Devuelve el peso de la fuente.
 /// @group peso-fuente
 @function font-weight($weight) {
     @return map-get($font-weights, $weight);
 }
 
-//Variables para poner un tamaño para mediaquery predeterminada
+//Variables para poner un tamaño para mediaquery predeterminado
 /// @group media-query
 $sizesr: (
   sm: 576px,
@@ -168,9 +158,9 @@ $sizesr: (
   xxl:1370px
 );
 
-//funcion para poner un tamaño para mediaquery predeterminada
-/// @param {string} $size 
-/// @return {size} 
+//funcion para poner un tamaño para mediaquery predeterminado
+/// @param {string} $size - Tamaño de la media query en formato de cadena de texto.
+/// @return {size} Devuelve el tamaño de la media query.
 /// @group media-query
 @function size($size){
   @return map-get($sizesr, $size);

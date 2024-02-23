@@ -6,11 +6,22 @@ footer{
         p{
             &:first-child {
                 @include text-size('xs');
+                
+              @include responsive(lg){
+                @include text-size('s');
+            }
               }
+
+              @include responsive(lg){
+                @include text-size('s');
+            }
         }
     }
     ul{
         list-style: none;
         padding-left: 0;
+        @include responsive(lg){
+            @include text-size('s');
+        }
     }
 }
