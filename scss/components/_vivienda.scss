@@ -1,0 +1,198 @@
+.vivienda:first-of-type{
+    margin-top: margin('l');
+    @include responsive(lg) {
+      margin-top: margin('xs');
+    }
+  }
+  .vivienda{
+    background-color: color('secondary');
+    
+    margin-bottom: margin('xxs');
+    h1{
+      @include pesoFuente('light');
+      @include responsive(lg){
+        @include text-size('lg');
+    }
+    }
+    
+      .carousel{
+        img{
+          height: 450px;
+          @include responsive(lg){
+            height: height("lg");
+        }
+        }
+        .carousel-item{
+          height: 450px;
+          @include responsive(lg){
+            height: height("lg");
+        }
+        }
+
+        .heart-container {
+          --heart-color: white;
+          position: absolute;
+          width: 30px;
+          height: 30px;
+          transition: .3s;
+          z-index: 199;
+          top: 20px;
+          right: 20px;
+        }
+        
+        .heart-container .checkbox {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          opacity: 0;
+          z-index: 20;
+          cursor: pointer;
+        }
+        
+        .heart-container .svg-container {
+          width: 100%;
+          height: 100%;
+          @include flexposition($direction:row, $justify:center, $align:center);
+        }
+        
+        .heart-container .svg-outline,
+                .heart-container .svg-filled {
+          fill: var(--heart-color);
+          position: absolute;
+        }
+        
+        .heart-container .svg-filled {
+          animation: keyframes-svg-filled 1s;
+          display: none;
+        }
+        
+        .heart-container .svg-celebrate {
+          position: absolute;
+          animation: keyframes-svg-celebrate .5s;
+          animation-fill-mode: forwards;
+          display: none;
+          stroke: var(--heart-color);
+          fill: var(--heart-color);
+          stroke-width: 2px;
+        }
+        
+        .heart-container .checkbox:checked~.svg-container .svg-filled {
+          display: block
+        }
+        
+        .heart-container .checkbox:checked~.svg-container .svg-celebrate {
+          display: block
+        }
+        
+        @keyframes keyframes-svg-filled {
+          0% {
+            transform: scale(0);
+          }
+        
+          25% {
+            transform: scale(1.2);
+          }
+        
+          50% {
+            transform: scale(1);
+            filter: brightness(1.5);
+          }
+        }
+        
+        @keyframes keyframes-svg-celebrate {
+          0% {
+            transform: scale(0);
+          }
+        
+          50% {
+            opacity: 1;
+            filter: brightness(1.5);
+          }
+        
+          100% {
+            transform: scale(1.4);
+            opacity: 0;
+            display: none;
+          }
+        }
+      }
+      .content {
+        padding:  margin('xs');
+        flex: 1;
+        p{
+          @include pesoFuente('superlight');
+          @include text-size('xs');
+          @include responsive(lg){
+            @include text-size('sm');
+        }
+        }
+        ul{
+          list-style-type: none;
+          margin-left: 0;
+          padding: 0;
+          
+          li {
+            display: inline; 
+            margin-right: margin('xxs'); 
+          }
+        }
+        hr{
+          margin-right: margin('xxs'); 
+          margin-left: margin('xxs'); 
+        } 
+
+        div:first-of-type{
+          
+          height: gap("sm");
+        }
+        div:last-of-type{
+          
+        
+          margin-top: margin('s');
+
+          button{
+            padding-left: margin('xs');
+            padding-right: margin('xs');
+            padding-top: margin('xxxs');
+            padding-bottom: margin('xxxs');
+            background-color: color('secondary');
+            color:color('primary');
+            border: 1px solid color('primary');
+            @include text-size('xs');
+            @include pesoFuente('superlight');
+
+            @include responsive(lg){
+              @include text-size('sm');
+              @include pesoFuente('regular');
+              padding-left: margin('s');
+            padding-right: margin('s');
+            padding-top: margin('xxs');
+            padding-bottom: margin('xxs');
+            border: 2px solid color('primary');
+          }
+
+            a{
+              text-decoration: none;
+              &:link{
+                color: color("primary");
+              }
+              &:visited{
+                color: color("primary");
+              }
+              &:hover{
+                color:color('secondary');
+              }
+            }
+            
+          }
+          button:hover{
+            background-color: color('primary');
+          }
+        }
+        
+        
+        
+    }
+
+    
+  }

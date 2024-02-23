@@ -1,0 +1,34 @@
+.about{
+    @include flexposition($direction:column, $justify:center, $align:center);
+   
+    
+    
+   
+   
+    .features{
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); 
+      width: width("lg");
+  
+      @include responsive(lg){
+        display: flex;
+        flex-wrap: wrap;
+        margin-left: 0;
+        
+    }
+      
+      .aspect{
+        @include flexposition($direction:row, $justify:center, $align:center);
+        
+        @include responsive(sm){
+          flex-direction: column;
+          text-align: center;
+          
+      }
+        @include responsive(lg){
+          width: width("xl");
+      }
+        
+      }
+    }
+  }

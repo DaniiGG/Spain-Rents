@@ -1,0 +1,83 @@
+.revista{
+    
+    img{
+      @include responsive(lg){
+        width: width("sm") !important;
+     }
+    }
+    h1{
+      @include pesoFuente('superlight');
+      text-align: center;
+      @include responsive(lg){
+        @include text-size('lg');
+     }
+    }
+    p{
+      text-align: center;
+      margin-bottom: margin('md');
+      @include responsive(lg){
+        @include text-size('s');
+     }
+    }
+    .revista-container{
+      
+      column-gap: margin("xs");
+    
+    .revista-item{
+
+      img{
+        height: widht('s');
+        width: width('s');
+        @include responsive(lg){
+          width: width('xxl') !important;
+       }
+      }
+
+      .content{
+         
+        margin: margin('s');
+
+        h3{
+          @include pesoFuente('light');
+
+          @include responsive(lg){
+            @include text-size('lg');
+            @include pesoFuente('regular');
+        }
+        }
+        p{
+          text-align: left;
+          @include pesoFuente('light');
+          @include text-size('xs');
+          color: color('texto-revista');
+
+          @include responsive(lg){
+            @include text-size('sm');
+            @include pesoFuente('regular');
+        }
+        }
+        button{
+          padding-left: margin('xs');
+          padding-right: margin('xs');
+          padding-top: margin('xxs');
+          padding-bottom: margin('xxs');
+          background-color: color('secondary');
+          color:color('primary');
+          border: 1px solid color('primary');
+          @include text-size('xs');
+          @include pesoFuente('superlight');
+          @include responsive(lg){
+            @include text-size('sm');
+            @include pesoFuente('regular');
+        }
+        }
+        button:hover{
+          background-color: color('primary');
+          color:color('secondary');
+        }
+      }
+
+    }
+  }
+
+  }

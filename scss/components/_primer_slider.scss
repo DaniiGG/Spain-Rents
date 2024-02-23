@@ -1,0 +1,29 @@
+//esto seria el hero o primer slider
+.slider{
+
+    .carousel{
+      img{
+        height: height("lg");
+        @include responsive(lg){
+          height: height("lg");
+      }
+      }
+      .carousel-item{
+        @include responsive(lg){
+          height: height("lg");
+      }
+      }
+    }
+    
+    h5{
+      margin-bottom: margin('max');
+      @include text-size('xl');
+      @include pesoFuente('superlight');
+
+      @include responsive(lg){
+        @include pesoFuente('regular');
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        margin-top: margin("xxl");
+    }
+    }      
+  }

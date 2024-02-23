@@ -1,3 +1,4 @@
+//aqui esta el footer
 footer{
     box-shadow: 0px -2px 2px 1px rgba(0, 0, 0, 0.4);
     padding: margin("md");
@@ -8,12 +9,14 @@ footer{
                 @include text-size('xs');
                 
               @include responsive(lg){
-                @include text-size('s');
+                @include text-size('sm');
+                @include pesoFuente('regular');
             }
               }
 
               @include responsive(lg){
-                @include text-size('s');
+                @include text-size('sm');
+                
             }
         }
     }
@@ -21,7 +24,7 @@ footer{
         list-style: none;
         padding-left: 0;
         @include responsive(lg){
-            @include text-size('s');
+            @include text-size('sm');
         }
     }
 }

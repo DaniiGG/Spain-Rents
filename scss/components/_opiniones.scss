@@ -1,0 +1,45 @@
+//apartado de opiniones de la pagina principal
+.opiniones{
+
+    @include responsive(sm){
+     margin-bottom: margin("s");
+     display: none
+  }
+    h1{
+      @include pesoFuente('superlight');
+      text-align: center;
+      
+    }
+    .slide{
+      .carousel-item{
+        height: 450px;
+      }
+
+      .opinion{
+        margin: margin('xl');
+        text-align: center;
+        img{
+          height: 22px
+        }
+
+        p{
+          @include pesoFuente('superlight');
+          @include text-size('s');
+
+          &:last-child {
+            @include text-size('xs');
+          }
+        }
+        
+        
+      }
+
+      .carousel-control-prev-icon, .carousel-control-next-icon {
+        filter: invert(108%);
+      }
+      .button{
+        filter: invert(108%);
+      }
+    }
+
+  }

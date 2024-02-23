@@ -1,0 +1,49 @@
+// Mixin para establecer el tamaño del texto
+/// @param {string} $size - Tamaño del texto. Por defecto: 's'.
+@mixin text-size($size: s) {
+  font-size: tamano($size);
+}
+
+// Mixin para establecer el peso de la fuente
+/// @param {string} $peso - Peso de la fuente. Por defecto: 's'.
+@mixin pesoFuente($peso: s) {
+  font-weight: font-weight($peso);
+}
+
+// Mixin para estilos responsivos
+/// @param {string} $size - Tamaño de la media query. Por defecto: 'sm'.
+@mixin responsive($size: sm) {
+  @media screen and (max-width: size($size)) {
+    @content;
+  }
+}
+
+// Mixin para estilos de un botón de detalles
+/// No se aceptan parámetros. Se aplican estilos predefinidos.
+@mixin boton-detalles {
+  padding-left: margin('xs');
+  padding-right: margin('xs');
+  padding-top: margin('xxs');
+  padding-bottom: margin('xxs');
+  background-color: color('secondary');
+  color: color('primary');
+  border: 1px solid color('primary');
+  @include text-size('xs');
+  @include pesoFuente('superlight');
+
+  &:hover {
+    background-color: color('primary');
+    color: color('secondary');
+  }
+}
+
+// Mixin para establecer las propiedades de posicionamiento flexibles
+/// @param {string} $direction - Dirección de la flexbox. Por defecto: 'row'.
+/// @param {string} $justify - Alineación horizontal de la flexbox. Por defecto: 'center'.
+/// @param {string} $align - Alineación vertical de la flexbox. Por defecto: 'center'.
+@mixin flexposition($direction: row, $justify: center, $align: center) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+}

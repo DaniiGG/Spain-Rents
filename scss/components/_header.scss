@@ -1,3 +1,4 @@
+//este es el header
 header{
 // Estilos del menú
   h5{
@@ -19,9 +20,15 @@ header{
     }
     .nav-item{
       margin-right: margin("xxs");
+      
 
       .nav-link{
         border-radius: 10px;
+        @include responsive(lg) {
+          @include text-size('sm');
+          border-bottom: 1px solid white;
+          border-radius: 0;
+        }
         &:hover{
           background-color:  rgba(color("hover-menu"), 0.6);
         
@@ -61,6 +68,9 @@ input{
   border: none;
   cursor: pointer;
   transition: background-color 0.3s;
+  @include responsive(lg) {
+     @include text-size('s');
+   }
   
   &:hover {
     background-color: darken(color("hover-menu"), 10%);

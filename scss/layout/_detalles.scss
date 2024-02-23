@@ -1,0 +1,61 @@
+.detalles{
+    
+    h1{
+      @include pesoFuente('light');
+        @include responsive(lg){
+          @include text-size('xl')
+          
+      }
+    }
+
+
+
+    .informacion1{
+      @include flexposition($direction:wrap, $justify:space-between, $align:flex-start);
+     
+      @include responsive(lg){
+        flex-wrap: wrap;
+        
+    }
+      
+      .flex-left{
+        .info-base{
+          @include flexposition($direction:row, $justify:space-between, $align:center);
+         
+          @include responsive(sm){
+            @include flexposition($direction:column, $justify:space-between, $align:center);
+            
+         }
+        }
+      }
+      .wish{
+        @include flexposition($direction:column, $justify:space-between, $align:none);
+        
+      }
+    }
+    .instalaciones{
+      
+      @include flexposition($direction:column, $justify:none, $align:none);
+     
+      .indoor, .outdoor{
+        @include flexposition($direction:column, $justify:none, $align:none);
+       
+        ul{
+          column-count: 3; 
+
+
+          @include responsive(lg){
+            column-count: 2; 
+          }
+          @include responsive(md){
+            column-count: 1; 
+            @include flexposition($direction:column, $justify:none, $align:none);
+          }
+          
+        }
+      }
+
+    }
+
+
+  }

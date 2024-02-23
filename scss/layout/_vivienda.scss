@@ -1,0 +1,24 @@
+.vivienda{
+    
+    display:grid;
+    grid-template-columns: 1.65fr 2fr;
+    
+    
+      .content {
+        div:first-of-type{
+          @include flexposition($direction:row, $justify:space-between, $align:flex-start);
+          
+          @include responsive(sm){
+           display: flex;
+        }
+        }
+        div:last-of-type{
+          @include flexposition($direction:row, $justify:space-between, $align:flex-start);
+        
+        }
+    }
+    @include responsive(lg){
+      grid-template-columns: 1fr ;
+      
+  }
+  }

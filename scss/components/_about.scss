@@ -1,0 +1,72 @@
+//Este es el componente de about o sobre nosotros
+
+.about{
+    
+    margin-top: margin('sm');
+    margin-bottom: margin('lg');
+    
+    
+    h1{
+      @include pesoFuente('superlight');
+      text-align: center;
+      margin-bottom: margin('md');
+      
+    }
+    .more-button{
+      margin-top: margin("sm");
+      text-align: center;
+
+
+        button{
+          text-transform: uppercase;
+          @include text-size('xxxs');
+          padding-left: margin('sm');
+          padding-right: margin('sm');
+          padding-top: margin('xxs');
+          padding-bottom: margin('xxs');
+          background-color: color('primary');
+          color:color('secondary');
+          border:none;
+          border: 1px solid color('primary');
+          @include responsive(lg){
+            @include text-size('s');
+            padding-left: margin('md');
+          padding-right: margin('md');
+          padding-top: margin('xs');
+          padding-bottom: margin('xs');
+        }
+        }
+        button:hover{
+          background-color: color('secondary');
+          color:color('primary');
+        }
+    }
+
+    .features{
+      column-gap: 20px;
+  
+      
+      .aspect{
+        
+        column-gap: 15px;
+        
+        .icon{
+          font-size: 2rem;
+          
+        
+        }
+      }
+
+      h5{
+        @include pesoFuente('medium');
+        @include responsive(lg){
+          @include text-size('sm');
+      }
+      }
+      p{
+        @include responsive(lg){
+          @include text-size('s');
+      }
+      }
+    }
+  }
